@@ -44,13 +44,19 @@ Bugs
 Send a PR.
 '''
 
-setup(name='lolcat',
-      version='1.4',
-      description='Rainbows and unicorns!',
-      long_description=LONG_DESCRIPTION,
-      long_description_content_type='text/markdown',
-      author='Wijnand Modderman-Lenstra',
-      author_email='maze@pyth0n.org',
-      url='https://github.com/tehmaze/lolcat/',
-      scripts=['lolcat'],
-     )
+setup(
+    name='lolcat',
+    version='1.4',
+    description='Rainbows and unicorns!',
+    long_description=LONG_DESCRIPTION,
+    long_description_content_type='text/markdown',
+    author='Wijnand Modderman-Lenstra',
+    author_email='maze@pyth0n.org',
+    url='https://github.com/tehmaze/lolcat/',
+    py_modules=['lolcat'],
+    entry_points={
+        'console_scripts': [
+            'lolcat=lolcat:run',
+        ],
+    },
+)
